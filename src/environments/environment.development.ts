@@ -1,4 +1,4 @@
 export const environment = {
 
-    apiUrl : "https://good-hole-production.up.railway.app"
+    apiUrl : "https://be-class-scheduling-production.up.railway.app"
 };
