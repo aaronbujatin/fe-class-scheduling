@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class AuthenticationService {
   constructor(private httpClient: HttpClient) { }
 
   private readonly LOCAL_API = "http://localhost:8080";
-  private readonly DEPLOY_API = "https://good-hole-production.up.railway.app";
+  private readonly DEPLOY_API = environment.apiUrl
   isAuthenticated = new BehaviorSubject<boolean>(false);
 
   requestHeaders = new HttpHeaders(
