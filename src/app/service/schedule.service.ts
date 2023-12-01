@@ -13,7 +13,7 @@ export class ScheduleService {
   private readonly DEPLOY_API =  environment.apiUrl;
 
   public getScheduleByInstructorNameAndCourse(instructorName : string, course : string){
-    return this.httpClient.get(`${this.DEPLOY_API}/api/v1/schedules?instructorName=${instructorName}&course=${course}`)
+    return this.httpClient.get(`${this.LOCAL_API}/api/v1/schedules?instructorName=${instructorName}&course=${course}`)
   }
 
 }

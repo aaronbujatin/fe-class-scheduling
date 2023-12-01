@@ -15,8 +15,8 @@ export class TimeFormatPipe implements PipeTransform {
     const formattedTime = new Date();
     formattedTime.setHours(Number(hours), Number(minutes), Number(seconds));
 
-    // Use DatePipe's 'transform' method with a format string
+    // Use DatePipe's 'transform' method with a format string and timezone
     const datePipe = new DatePipe('en-US');
-    return datePipe.transform(formattedTime, 'shortTime'); // 'shortTime' format includes hours and minutes
+    return datePipe.transform(formattedTime, 'shortTime', 'Asia/Manila'); // Use Philippines timezone
   }
 }

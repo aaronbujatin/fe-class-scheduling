@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/service/authentication.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -37,6 +38,7 @@ export class LoginComponent {
       
           console.log(response);
         }, (error) => {
+          this.errorLoginAlert()
           console.log(error);
 
         }
@@ -44,6 +46,16 @@ export class LoginComponent {
     }
  
 
+  }
+
+  errorLoginAlert() {
+    Swal.fire({
+      text: "Invalid username or password.",
+      icon: "error",
+      confirmButtonText: "OK",
+      showCloseButton: true,
+      confirmButtonColor: '#1A56DB',
+    });
   }
 
 }
