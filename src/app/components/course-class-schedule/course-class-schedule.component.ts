@@ -66,6 +66,7 @@ export class CourseClassScheduleComponent implements OnInit {
   }
 
   schedules : Schedule[] 
+  
   public getScheduleByInstructorNameAndCourse(course: string) {
     this.authenticationService.getUserDetails().subscribe(
       (response: User) => {

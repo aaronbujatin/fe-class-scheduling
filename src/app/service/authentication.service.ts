@@ -22,7 +22,7 @@ export class AuthenticationService {
   public login(username: string, password: string): Observable<any> {
     const body = { username, password };
 
-    return this.httpClient.post(`${this.DEPLOY_API}/api/v1/auth/signin`, body, { headers: this.requestHeaders })
+    return this.httpClient.post(`${this.LOCAL_API}/api/v1/auth/signin`, body, { headers: this.requestHeaders })
   }
 
 
