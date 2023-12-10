@@ -1,7 +1,7 @@
 export class Schedule {
     instructorName : string
     subject : string
-    yearAndSection : string
+    yearSection : string
     semester : string
     roomNumber : number
     days : string
