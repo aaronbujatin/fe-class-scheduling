@@ -18,6 +18,8 @@ import { AuthGuard } from './security/auth.guard';
 import { TimeFormatPipe } from './time-format.pipe';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { EmailForgotPasswordComponent } from './components/email-forgot-password/email-forgot-password.component';
+import { ConfirmAccountComponent } from './components/confirm-account/confirm-account.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,9 @@ import { ContactComponent } from './components/contact/contact.component';
     LoginComponent,
     TimeFormatPipe,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    EmailForgotPasswordComponent,
+    ConfirmAccountComponent
   ],
   imports: [
     BrowserModule,
