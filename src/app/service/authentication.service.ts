@@ -51,11 +51,6 @@ export class AuthenticationService {
     return this.isAuthenticated.asObservable();
   }
 
-  // public getAuthentication(){
-  //   const token = localStorage.getItem("JWT");
-  //   const headers = new HttpHeaders().set("Authorization", `Bearer ${token}`);
-  //   return this.httpClient.get(`${this.LOCAL_API}/api/v1/users/test`,  { headers });
-  // }
 
 
 
